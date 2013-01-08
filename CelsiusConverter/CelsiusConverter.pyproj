@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8c3d0e8d-12fb-4ad5-80db-9eee235db506}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>CelsiusConverter.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <AssemblyName>CelsiusConverter</AssemblyName>
+    <Name>CelsiusConverter</Name>
+    <RootNamespace>CelsiusConverter</RootNamespace>
+    <InterpreterPath />
+    <CommandLineArguments />
+    <DebugStdLib>False</DebugStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="clrtype.py" />
+    <None Include="CelsiusConverter.py" />
+    <None Include="CelsiusConverter.xaml" />
+    <None Include="pyevent.py" />
+    <None Include="ViewModel.py" />
+  </ItemGroup>
+</Project>

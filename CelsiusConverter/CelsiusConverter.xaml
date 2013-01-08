@@ -1,0 +1,40 @@
+﻿<!--
+  Copyright © Iain McDonald 2011
+  
+  This file is part of CelsiusConverter.
+
+	CelsiusConverter is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	CelsiusConverter is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with D-LightedCelsiusConverter.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Window 
+	   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	   FocusManager.FocusedElement="{Binding ElementName=CelsiusBox}"
+	   Title="Celsius / Fahrenheit" Height="125" Width="225" ResizeMode="NoResize">
+	<Grid>
+		<Grid.Resources>
+			<GradientStopCollection x:Key="GreyToBlackDiagonalGrid">
+				<GradientStop Offset="0.3" Color="Gray" />
+				<GradientStop Offset="0.6" Color="#FF505050" />
+				<GradientStop Offset="1.0" Color="#FF202020" />
+			</GradientStopCollection>	
+		</Grid.Resources>
+		<Grid.Background>
+			<LinearGradientBrush StartPoint="0.1,0" EndPoint="0.8,1" GradientStops="{StaticResource GreyToBlackDiagonalGrid}" />
+		</Grid.Background>
+		<Label Foreground="White" Content="Celsius" Margin="12,10,119,0" VerticalAlignment="Top" />
+		<TextBox Name="CelsiusBox" Height="30" HorizontalAlignment="Left" Margin="88,12,0,0" Text="{Binding Path=CelsiusValue, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="64" />
+		<Label Foreground="White" Content="Fahrenheit" Height="27" Margin="12,47,119,0" VerticalAlignment="Top" />
+		<TextBox Name="FahrenheitBox" Height="30" HorizontalAlignment="Left" Margin="88,49,0,0" Text="{Binding Path=FahrenheitValue, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="64" />
+	</Grid>
+</Window> 
